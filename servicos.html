@@ -1,15 +1,239 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Serviços - Zero Grau</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>Serviços | Zero Grau Ar Condicionado</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Serviços especializados em instalação, manutenção, limpeza técnica e PMOC de ar condicionado em Lucas do Rio Verde."
+  />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+    }
+
+    /* HEADER */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav img {
+      height: 48px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #1e293b;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    .page-header h1 {
+      font-size: 42px;
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    .page-header p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 18px;
+      color: #64748b;
+    }
+
+    .divider {
+      width: 96px;
+      height: 6px;
+      background: #2563eb;
+      border-radius: 10px;
+      margin: 30px auto 0;
+    }
+
+    /* SERVICES GRID */
+    .services {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 32px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 20px rgba(0,0,0,.05);
+      transition: all .3s;
+      display: flex;
+      gap: 24px;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 20px 40px rgba(0,0,0,.1);
+      transform: translateY(-4px);
+    }
+
+    .icon-box {
+      width: 80px;
+      height: 80px;
+      background: #eff6ff;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      color: #2563eb;
+      flex-shrink: 0;
+    }
+
+    .service-card h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      color: #1e3a8a;
+    }
+
+    .service-card p {
+      color: #64748b;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .service-card ul {
+      padding: 0;
+      list-style: none;
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: #6b7280;
+      font-style: italic;
+    }
+
+    .service-card li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      background: #60a5fa;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .service-card a {
+      font-weight: bold;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .service-card a:hover {
+      color: #1e40af;
+    }
+
+    /* WHY US */
+    .why {
+      max-width: 1100px;
+      margin: 120px auto;
+      padding: 60px;
+      background: #1e3a8a;
+      border-radius: 32px;
+      color: #ffffff;
+    }
+
+    .why h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .why h4 {
+      font-size: 20px;
+      color: #93c5fd;
+      margin-bottom: 10px;
+    }
+
+    .why p {
+      color: #dbeafe;
+      opacity: .85;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #0f2a44;
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      border-top: 1px solid #1e3a5f;
+      padding-top: 20px;
+      font-size: 12px;
+      color: #93c5fd;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 999;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
   <nav>
-    <img src="assets/logo.png">
+    <img src="assets/logo.png" alt="Zero Grau Ar Condicionado">
     <div>
       <a href="index.html">Home</a>
       <a href="servicos.html">Serviços</a>
@@ -18,21 +242,100 @@
   </nav>
 </header>
 
-<section class="section">
-  <h2>Serviços</h2>
-  <div class="services">
-    <div class="service">Instalação profissional de ar-condicionado</div>
-    <div class="service">Manutenção preventiva para maior durabilidade</div>
-    <div class="service">Correção de falhas e vazamentos</div>
-    <div class="service">Limpeza completa e higienização</div>
+<section class="page-header">
+  <h1>Nossos Serviços Especializados</h1>
+  <p>
+    Trabalhamos com todas as marcas e modelos de ar-condicionado.
+    Nossa equipe está pronta para atender suas necessidades com precisão técnica e garantia.
+  </p>
+  <div class="divider"></div>
+</section>
+
+<section class="services">
+
+  <div class="service-card">
+    <div class="icon-box">❄️</div>
+    <div>
+      <h3>Instalação de Ar Condicionado</h3>
+      <p>Instalação profissional garantindo eficiência, segurança e maior vida útil do equipamento.</p>
+      <ul>
+        <li><span class="dot"></span>Atendimento regional</li>
+        <li><span class="dot"></span>Garantia especializada</li>
+      </ul>
+      <a href="https://wa.me/5565999780769" target="_blank">Orçar este serviço →</a>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <div class="icon-box">🛠️</div>
+    <div>
+      <h3>Manutenção Preventiva</h3>
+      <p>Evite falhas e aumente a performance do seu equipamento com revisões periódicas.</p>
+      <ul>
+        <li><span class="dot"></span>Mais economia</li>
+        <li><span class="dot"></span>Menos quebras</li>
+      </ul>
+      <a href="https://wa.me/5565999780769" target="_blank">Orçar este serviço →</a>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <div class="icon-box">🧼</div>
+    <div>
+      <h3>Limpeza Técnica</h3>
+      <p>Elimine fungos, bactérias e mau cheiro, garantindo ar mais saudável.</p>
+      <ul>
+        <li><span class="dot"></span>Saúde e bem-estar</li>
+        <li><span class="dot"></span>Ambiente limpo</li>
+      </ul>
+      <a href="https://wa.me/5565999780769" target="_blank">Orçar este serviço →</a>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <div class="icon-box">📋</div>
+    <div>
+      <h3>PMOC</h3>
+      <p>Plano de Manutenção, Operação e Controle conforme normas da vigilância sanitária.</p>
+      <ul>
+        <li><span class="dot"></span>Conformidade legal</li>
+        <li><span class="dot"></span>Ideal para empresas</li>
+      </ul>
+      <a href="https://wa.me/5565999780769" target="_blank">Orçar este serviço →</a>
+    </div>
+  </div>
+
+</section>
+
+<section class="why">
+  <h2>Por que escolher a Zero Grau?</h2>
+  <div class="why-grid">
+    <div>
+      <h4>Agilidade</h4>
+      <p>Atendimentos rápidos para quem não pode esperar pelo conforto.</p>
+    </div>
+    <div>
+      <h4>Confiança</h4>
+      <p>Peças originais, ferramentas profissionais e técnicos qualificados.</p>
+    </div>
+    <div>
+      <h4>Limpeza</h4>
+      <p>Ambiente limpo e organizado após cada serviço realizado.</p>
+    </div>
   </div>
 </section>
 
 <footer>
-  Zero Grau Ar Condicionado © 2026
+  <div class="footer-container">
+    <p>📞 (65) 99978-0769</p>
+    <p>📍 Rua Constantina, 2076 – Bairro Rio Verde – Lucas do Rio Verde – MT</p>
+    <div class="footer-bottom">
+      © 2026 Zero Grau Ar Condicionado. Todos os direitos reservados.
+    </div>
+  </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5565999780769" target="_blank">
+<a href="https://wa.me/5565999780769" target="_blank" class="whatsapp-float">
   WhatsApp
 </a>
 
