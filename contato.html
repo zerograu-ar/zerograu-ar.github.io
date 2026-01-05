@@ -1,15 +1,225 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Contato - Zero Grau</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>Contato | Zero Grau Ar Condicionado</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Fale com a Zero Grau Ar Condicionado. Atendimento rápido via WhatsApp em Lucas do Rio Verde e região."
+  />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+    }
+
+    /* HEADER */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav img {
+      height: 48px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #1e293b;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    /* CONTACT WRAPPER */
+    .contact-wrapper {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 20px;
+    }
+
+    .contact-box {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 30px 60px rgba(0,0,0,.15);
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+
+    /* LEFT */
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+      background: #2563eb;
+      color: #ffffff;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-info h1 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      color: #dbeafe;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .icon {
+      background: rgba(255,255,255,.2);
+      padding: 14px;
+      border-radius: 14px;
+      margin-right: 16px;
+      font-size: 20px;
+    }
+
+    .info-item small {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #bfdbfe;
+      font-weight: bold;
+    }
+
+    .info-item strong {
+      font-size: 20px;
+      display: block;
+      margin-top: 4px;
+    }
+
+    .info-footer {
+      font-size: 13px;
+      opacity: .6;
+      font-style: italic;
+      margin-top: 40px;
+    }
+
+    /* RIGHT */
+    .contact-action {
+      flex: 1;
+      min-width: 300px;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contact-action h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .contact-action p {
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .whatsapp-btn {
+      background: #25d366;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 18px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,.2);
+      transition: all .3s;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1ebe5d;
+      transform: scale(1.03);
+    }
+
+    .hours {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #0f2a44;
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      border-top: 1px solid #1e3a5f;
+      padding-top: 20px;
+      font-size: 12px;
+      color: #93c5fd;
+    }
+
+    /* FLOAT WHATSAPP */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 999;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
   <nav>
-    <img src="assets/logo.png">
+    <img src="assets/logo.png" alt="Zero Grau Ar Condicionado">
     <div>
       <a href="index.html">Home</a>
       <a href="servicos.html">Serviços</a>
@@ -18,16 +228,77 @@
   </nav>
 </header>
 
-<section class="section">
-  <h2>Fale Conosco</h2>
-  <p>Entre em contato agora mesmo pelo WhatsApp e solicite seu orçamento.</p>
+<section class="contact-wrapper">
+  <div class="contact-box">
+
+    <!-- INFO -->
+    <div class="contact-info">
+      <div>
+        <h1>Fale Conosco</h1>
+        <p>
+          Estamos prontos para atender você em qualquer lugar de
+          Lucas do Rio Verde e região. Mande uma mensagem agora!
+        </p>
+
+        <div class="info-item">
+          <div class="icon">📞</div>
+          <div>
+            <small>Telefone</small>
+            <strong>(65) 99978-0769</strong>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">📍</div>
+          <div>
+            <small>Localização</small>
+            <strong>Rua Constantina, 2076 – Bairro Rio Verde<br>Lucas do Rio Verde – MT</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-footer">
+        A Zero Grau garante atendimento ético, profissional e transparente.
+      </div>
+    </div>
+
+    <!-- ACTION -->
+    <div class="contact-action">
+      <h2>Contato imediato via WhatsApp</h2>
+      <p>
+        O WhatsApp é o nosso canal mais rápido de atendimento.
+        Clique no botão abaixo e fale agora mesmo com nossa equipe técnica.
+      </p>
+
+      <a
+        href="https://wa.me/5565999780769"
+        target="_blank"
+        class="whatsapp-btn"
+      >
+        Iniciar Conversa
+      </a>
+
+      <div class="hours">
+        <strong>Horário de Atendimento:</strong><br>
+        Segunda a Sexta: 07:30 às 17:30<br>
+        Sábado: 07:30 às 11:30
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <footer>
-  Zero Grau Ar Condicionado © 2026
+  <div class="footer-container">
+    <p>📞 (65) 99978-0769</p>
+    <p>📍 Rua Constantina, 2076 – Bairro Rio Verde – Lucas do Rio Verde – MT</p>
+    <div class="footer-bottom">
+      © 2026 Zero Grau Ar Condicionado. Todos os direitos reservados.
+    </div>
+  </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5565999780769" target="_blank">
+<a href="https://wa.me/5565999780769" target="_blank" class="whatsapp-float">
   WhatsApp
 </a>
 
