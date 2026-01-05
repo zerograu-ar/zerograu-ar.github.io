@@ -1,10 +1,235 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Zero Grau Ar Condicionado</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>Zero Grau Ar Condicionado | Climatização Residencial e Comercial</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Climatização residencial e comercial em Lucas do Rio Verde. Instalação, manutenção e limpeza de ar condicionado. Atendimento rápido via WhatsApp."
+  />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav img {
+      height: 48px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #1e293b;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    /* HERO */
+    .hero {
+      background: #2563eb;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero span {
+      color: #bfdbfe;
+    }
+
+    .hero p {
+      font-size: 22px;
+      margin-bottom: 40px;
+      color: #e0e7ff;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 16px 32px;
+      border-radius: 40px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .btn-primary {
+      background: #ffffff;
+      color: #2563eb;
+    }
+
+    .btn-secondary {
+      border: 2px solid #ffffff;
+      color: #ffffff;
+    }
+
+    /* SERVICES SUMMARY */
+    .services {
+      padding: 80px 20px;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .services p {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      color: #64748b;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      padding: 30px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      transition: all .3s;
+    }
+
+    .service-card:hover {
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      transform: translateY(-5px);
+    }
+
+    /* RESIDENTIAL / COMMERCIAL */
+    .focus {
+      padding: 80px 20px;
+      background: #eff6ff;
+    }
+
+    .focus-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .focus-box {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid #bfdbfe;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #dbeafe;
+      color: #2563eb;
+      font-weight: bold;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    /* CTA */
+    .cta {
+      background: #2563eb;
+      color: #ffffff;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 20px 40px;
+      background: #ffffff;
+      color: #2563eb;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #0f2a44;
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-info {
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1e3a5f;
+      padding-top: 20px;
+      font-size: 12px;
+      color: #93c5fd;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 999;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
@@ -19,28 +244,59 @@
 </header>
 
 <section class="hero">
-  <div class="hero-text">
-    <h1>Climatização Residencial e Comercial</h1>
-    <p>Atendimento rápido com técnicos qualificados</p>
+  <h1>Climatização <br><span>Residencial e Comercial</span></h1>
+  <p>Atendimento rápido com técnicos qualificados.</p>
+  <div class="hero-buttons">
+    <a href="https://wa.me/5565999780769" target="_blank" class="btn-primary">Solicitar Orçamento</a>
+    <a href="servicos.html" class="btn-secondary">Ver Serviços</a>
   </div>
-  <img src="https://images.unsplash.com/photo-1621905252507-b354bcadcabc?auto=format&fit=crop&q=80&w=600">
 </section>
 
-<section class="section">
+<section class="services">
   <h2>Nossos Serviços</h2>
-  <div class="services">
-    <div class="service">Instalação de ar-condicionado</div>
-    <div class="service">Manutenção preventiva</div>
-    <div class="service">Manutenção corretiva</div>
-    <div class="service">Limpeza e higienização</div>
+  <p>Soluções completas em climatização para conforto e eficiência.</p>
+
+  <div class="services-grid">
+    <div class="service-card">Instalação de Ar Condicionado</div>
+    <div class="service-card">Manutenção Preventiva</div>
+    <div class="service-card">Limpeza Técnica</div>
+    <div class="service-card">PMOC</div>
   </div>
+</section>
+
+<section class="focus">
+  <div class="focus-grid">
+    <div class="focus-box">
+      <span class="badge">Residencial</span>
+      <h3>Conforto para sua Família</h3>
+      <p>Instalações eficientes, silenciosas e seguras para sua casa.</p>
+    </div>
+
+    <div class="focus-box">
+      <span class="badge">Comercial</span>
+      <h3>Soluções para Empresas</h3>
+      <p>Planos PMOC, suporte técnico e eficiência energética.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Não sofra com o calor!</h2>
+  <p>Fale agora com nossa equipe e solicite seu orçamento.</p>
+  <a href="https://wa.me/5565999780769" target="_blank">Chamar no WhatsApp</a>
 </section>
 
 <footer>
-  Zero Grau Ar Condicionado © 2026
+  <div class="footer-container">
+    <p>📞 (65) 99978-0769</p>
+    <p>📍 Rua Constantina, 2076 – Bairro Rio Verde – Lucas do Rio Verde – MT</p>
+    <div class="footer-bottom">
+      © 2026 Zero Grau Ar Condicionado. Todos os direitos reservados.
+    </div>
+  </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5565999780769" target="_blank">
+<a href="https://wa.me/5565999780769" target="_blank" class="whatsapp-float">
   WhatsApp
 </a>
 
